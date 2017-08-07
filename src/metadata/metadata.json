@@ -1,0 +1,129 @@
+{
+    "package": "GoogleURLShortener",
+    "tagline": "GoogleURLShortener API",
+    "description": "With the URL Shortener API you can write applications that use simple HTTP methods to create, inspect, and manage goo.gl short links from desktop, mobile, or web.",
+    "image": "https:\/\/logo.clearbit.com\/google.com",
+    "repo": "https:\/\/github.com\/RapidSoftwareSolutions\/Marketplace-GoogleURLShortener-Package",
+    "keywords": [
+        "API",
+        "url",
+        "link",
+        "shorter",
+        "google"
+    ],
+    "accounts": {
+        "domain": "goo.gl",
+        "credentials": [
+            "apiKey",
+            "accessToken"
+        ]
+    },
+    "blocks": [
+        {
+            "name": "shortenLongUrl",
+            "description": "The Google URL Shortener API allows you to shorten URLs just as you would on goo.gl.",
+            "args": [
+                {
+                    "name": "apiKey",
+                    "type": "credentials",
+                    "info": "Your application API key.",
+                    "required": true
+                },
+                {
+                    "name": "longUrl",
+                    "type": "String",
+                    "info": "Long URL",
+                    "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
+            ]
+        },
+        {
+            "name": "expandShortUrl",
+            "description": "You can call this method to expand any goo.gl short URL.",
+            "args": [
+                {
+                    "name": "apiKey",
+                    "type": "credentials",
+                    "info": "Your application API key.",
+                    "required": true
+                },
+                {
+                    "name": "shortUrl",
+                    "type": "String",
+                    "info": "Short URL",
+                    "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
+            ]
+        },
+        {
+            "name": "getUrlAnalytics",
+            "description": "To look up a short URL's analytics",
+            "args": [
+                {
+                    "name": "apiKey",
+                    "type": "credentials",
+                    "info": "Your application API key.",
+                    "required": true
+                },
+                {
+                    "name": "shortUrl",
+                    "type": "String",
+                    "info": "Short URL",
+                    "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
+            ]
+        },
+        {
+            "name": "getUserHistory",
+            "description": "To fetch a user's history.",
+            "args": [
+                {
+                    "name": "accessToken",
+                    "type": "credentials",
+                    "info": "OAuth 2.0 access token.",
+                    "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
+            ]
+        }
+    ]
+}
