@@ -77,7 +77,7 @@
         },
         {
             "name": "getUrlAnalytics",
-            "description": "To look up a short URL's analytics",
+            "description": "To look up a short URL`s analytics",
             "args": [
                 {
                     "name": "apiKey",
@@ -105,7 +105,7 @@
         },
         {
             "name": "getUserHistory",
-            "description": "To fetch a user's history.",
+            "description": "To fetch a user`s history.",
             "args": [
                 {
                     "name": "accessToken",
